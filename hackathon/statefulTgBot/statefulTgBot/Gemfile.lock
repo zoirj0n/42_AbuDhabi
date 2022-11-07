@@ -1,0 +1,64 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (6.1.7)
+      activesupport (= 6.1.7)
+    activerecord (6.1.7)
+      activemodel (= 6.1.7)
+      activesupport (= 6.1.7)
+    activesupport (6.1.7)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+      zeitwerk (~> 2.3)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    concurrent-ruby (1.1.10)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    dry-inflector (0.2.1)
+    faraday (2.6.0)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-multipart (1.0.4)
+      multipart-post (~> 2)
+    faraday-net_http (3.0.1)
+    i18n (1.12.0)
+      concurrent-ruby (~> 1.0)
+    ice_nine (0.11.2)
+    minitest (5.16.3)
+    multipart-post (2.2.3)
+    pg (1.4.4)
+    rake (13.0.6)
+    ruby2_keywords (0.0.5)
+    telegram-bot-ruby (0.21.1)
+      dry-inflector
+      faraday (~> 2.0)
+      faraday-multipart (~> 1.0)
+      virtus (~> 2.0)
+    thread_safe (0.3.6)
+    tzinfo (2.0.5)
+      concurrent-ruby (~> 1.0)
+    virtus (2.0.0)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+    zeitwerk (2.6.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activerecord
+  i18n
+  pg
+  rake
+  telegram-bot-ruby
+
+BUNDLED WITH
+   1.17.2
