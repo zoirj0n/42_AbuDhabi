@@ -6,17 +6,17 @@
 /*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 12:49:45 by zosobiro          #+#    #+#             */
-/*   Updated: 2022/11/15 12:50:01 by zosobiro         ###   ########.fr       */
+/*   Updated: 2022/11/15 12:53:00 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "get_next_line_bonus.h"
 
-char *ft_read_to_left_str(int fd, char *left_str)
+char	*ft_read_to_left_str(int fd, char *left_str)
 {
-	char *buff;
-	int rd_bytes;
+	char	*buff;
+	int		rd_bytes;
 
 	buff = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buff)

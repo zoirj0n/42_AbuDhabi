@@ -6,16 +6,16 @@
 /*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 12:49:37 by zosobiro          #+#    #+#             */
-/*   Updated: 2022/11/15 12:49:38 by zosobiro         ###   ########.fr       */
+/*   Updated: 2022/11/15 12:54:59 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "get_next_line.h"
 
-size_t ft_strlen(char *s)
+size_t	ft_strlen(char *s)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (!s)
@@ -25,9 +25,9 @@ size_t ft_strlen(char *s)
 	return (i);
 }
 
-char *ft_strchr(char *s, int c)
+char	*ft_strchr(char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!s)
@@ -43,11 +43,11 @@ char *ft_strchr(char *s, int c)
 	return (0);
 }
 
-char *ft_strjoin(char *left_str, char *buff)
+char	*ft_strjoin(char *left_str, char *buff)
 {
-	size_t i;
-	size_t j;
-	char *str;
+	size_t	i;
+	size_t	j;
+	char	*str;
 
 	if (!left_str)
 	{
@@ -71,10 +71,10 @@ char *ft_strjoin(char *left_str, char *buff)
 	return (str);
 }
 
-char *ft_get_line(char *left_str)
+char	*ft_get_line(char *left_str)
 {
-	int i;
-	char *str;
+	int		i;
+	char	*str;
 
 	i = 0;
 	if (!left_str[i])
@@ -99,11 +99,11 @@ char *ft_get_line(char *left_str)
 	return (str);
 }
 
-char *ft_new_left_str(char *left_str)
+char	*ft_new_left_str(char *left_str)
 {
-	int i;
-	int j;
-	char *str;
+	int		i;
+	int		j;
+	char	*str;
 
 	i = 0;
 	while (left_str[i] && left_str[i] != '\n')

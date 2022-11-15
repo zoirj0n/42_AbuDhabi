@@ -6,16 +6,16 @@
 /*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 12:49:38 by zosobiro          #+#    #+#             */
-/*   Updated: 2022/11/15 12:49:40 by zosobiro         ###   ########.fr       */
+/*   Updated: 2022/11/15 12:52:45 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char *ft_read_to_left_str(int fd, char *left_str)
+char	*ft_read_to_left_str(int fd, char *left_str)
 {
-	char *buff;
-	int rd_bytes;
+	char	*buff;
+	int		rd_bytes;
 
 	buff = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buff)
@@ -51,10 +51,10 @@ char *get_next_line(int fd)
 	return (line);
 }
 
-int main(void)
+int	main(void)
 {
-	char *line;
-	int fd1;
+	char	*line;
+	int		fd1;
 
 	fd1 = open("test/test.txt", O_RDONLY);
 	line = get_next_line(fd1);
