@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/17 02:52:50 by zosobiro          #+#    #+#             */
+/*   Updated: 2022/06/17 02:52:50 by zosobiro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int	ft_printchar(int c)
@@ -52,13 +64,13 @@ int	ft_printf(const char *str, ...)
 	return (print_length);
 }
 
-int	main(void)
-{
+// int	main(void)
+// {
 
-	int x = 42;
-	int *ptr = &x;
+// 	int x = 42;
+// 	int *ptr = &x;
 
-	ft_printf("%p %s\n", ptr, "salam");
-	printf("%p %s %x", ptr, "aleikoum ", 15);
-	return (0);
-}
+// 	ft_printf("%p %s\n", ptr, "salam");
+// 	printf("%p %s %x", ptr, "aleikoum ", 15);
+// 	return (0);
+// }
