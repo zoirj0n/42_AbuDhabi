@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -16,12 +17,25 @@ char	*ft_read_to_left_string(int fd, char *left_str)
 {
 	char	*buff;
 	int		rd_bytes;
+=======
+
+#include "get_next_line_bonus.h"
+
+char *ft_read_to_left_str(int fd, char *left_str)
+{
+	char *buff;
+	int rd_bytes;
+>>>>>>> a1abd31497d2d75af38186dfe9efc2fbfe71d7ff
 
 	buff = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buff)
 		return (NULL);
 	rd_bytes = 1;
+<<<<<<< HEAD
 	while (!ft_stringchar(left_str, '\n') && rd_bytes != 0)
+=======
+	while (!ft_strchr(left_str, '\n') && rd_bytes != 0)
+>>>>>>> a1abd31497d2d75af38186dfe9efc2fbfe71d7ff
 	{
 		rd_bytes = read(fd, buff, BUFFER_SIZE);
 		if (rd_bytes == -1)
@@ -36,6 +50,7 @@ char	*ft_read_to_left_string(int fd, char *left_str)
 	return (left_str);
 }
 
+<<<<<<< HEAD
 char	*get_next_line(int fd)
 {
 	char		*line;
@@ -48,6 +63,20 @@ char	*get_next_line(int fd)
 		return (NULL);
 	line = ft_get_line(left_str[fd]);
 	left_str[fd] = ft_new_left_string(left_str[fd]);
+=======
+char *get_next_line(int fd)
+{
+	char *line;
+	static char *left_str[4096];
+
+	if (fd < 0 || BUFFER_SIZE <= 0)
+		return (0);
+	left_str[fd] = ft_read_to_left_str(fd, left_str[fd]);
+	if (!left_str[fd])
+		return (NULL);
+	line = ft_get_line(left_str[fd]);
+	left_str[fd] = ft_new_left_str(left_str[fd]);
+>>>>>>> a1abd31497d2d75af38186dfe9efc2fbfe71d7ff
 	return (line);
 }
 

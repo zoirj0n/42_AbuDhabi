@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -15,6 +16,14 @@
 size_t	ft_strlen(char *s)
 {
 	size_t	i;
+=======
+
+#include "get_next_line_bonus.h"
+
+size_t ft_strlen(char *s)
+{
+	size_t i;
+>>>>>>> a1abd31497d2d75af38186dfe9efc2fbfe71d7ff
 
 	i = 0;
 	if (!s)
@@ -24,9 +33,15 @@ size_t	ft_strlen(char *s)
 	return (i);
 }
 
+<<<<<<< HEAD
 char	*ft_stringchar(char *s, int c)
 {
 	int	i;
+=======
+char *ft_strchr(char *s, int c)
+{
+	int i;
+>>>>>>> a1abd31497d2d75af38186dfe9efc2fbfe71d7ff
 
 	i = 0;
 	if (!s)
@@ -42,11 +57,19 @@ char	*ft_stringchar(char *s, int c)
 	return (0);
 }
 
+<<<<<<< HEAD
 char	*ft_strjoin(char *left_str, char *buff)
 {
 	size_t	i;
 	size_t	j;
 	char	*str;
+=======
+char *ft_strjoin(char *left_str, char *buff)
+{
+	size_t i;
+	size_t j;
+	char *str;
+>>>>>>> a1abd31497d2d75af38186dfe9efc2fbfe71d7ff
 
 	if (!left_str)
 	{
@@ -70,10 +93,17 @@ char	*ft_strjoin(char *left_str, char *buff)
 	return (str);
 }
 
+<<<<<<< HEAD
 char	*ft_get_line(char *left_str)
 {
 	int		i;
 	char	*str;
+=======
+char *ft_get_line(char *left_str)
+{
+	int i;
+	char *str;
+>>>>>>> a1abd31497d2d75af38186dfe9efc2fbfe71d7ff
 
 	i = 0;
 	if (!left_str[i])
@@ -98,11 +128,19 @@ char	*ft_get_line(char *left_str)
 	return (str);
 }
 
+<<<<<<< HEAD
 char	*ft_new_left_string(char *left_str)
 {
 	int		i;
 	int		j;
 	char	*str;
+=======
+char *ft_new_left_str(char *left_str)
+{
+	int i;
+	int j;
+	char *str;
+>>>>>>> a1abd31497d2d75af38186dfe9efc2fbfe71d7ff
 
 	i = 0;
 	while (left_str[i] && left_str[i] != '\n')

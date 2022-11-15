@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -38,15 +39,54 @@ char	*ft_stringchar(char *st, int ch)
 		if (st[k] == (char)ch)
 			return ((char *)&st[k]);
 		k++;
+=======
+
+#include "get_next_line.h"
+
+size_t ft_strlen(char *s)
+{
+	size_t i;
+
+	i = 0;
+	if (!s)
+		return (0);
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+
+char *ft_strchr(char *s, int c)
+{
+	int i;
+
+	i = 0;
+	if (!s)
+		return (0);
+	if (c == '\0')
+		return ((char *)&s[ft_strlen(s)]);
+	while (s[i] != '\0')
+	{
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
+		i++;
+>>>>>>> a1abd31497d2d75af38186dfe9efc2fbfe71d7ff
 	}
 	return (0);
 }
 
+<<<<<<< HEAD
 char	*ft_strjoin(char *left_str, char *buff)
 {
 	size_t	i;
 	size_t	j;
 	char	*str;
+=======
+char *ft_strjoin(char *left_str, char *buff)
+{
+	size_t i;
+	size_t j;
+	char *str;
+>>>>>>> a1abd31497d2d75af38186dfe9efc2fbfe71d7ff
 
 	if (!left_str)
 	{
@@ -70,10 +110,17 @@ char	*ft_strjoin(char *left_str, char *buff)
 	return (str);
 }
 
+<<<<<<< HEAD
 char	*ft_get_line(char *left_str)
 {
 	int		i;
 	char	*str;
+=======
+char *ft_get_line(char *left_str)
+{
+	int i;
+	char *str;
+>>>>>>> a1abd31497d2d75af38186dfe9efc2fbfe71d7ff
 
 	i = 0;
 	if (!left_str[i])
@@ -98,6 +145,7 @@ char	*ft_get_line(char *left_str)
 	return (str);
 }
 
+<<<<<<< HEAD
 char	*ft_new_left_string(char *left_string)
 {
 	int		l;
@@ -122,4 +170,30 @@ char	*ft_new_left_string(char *left_string)
 	string[j] = '\0';
 	free(left_string);
 	return (string);
+=======
+char *ft_new_left_str(char *left_str)
+{
+	int i;
+	int j;
+	char *str;
+
+	i = 0;
+	while (left_str[i] && left_str[i] != '\n')
+		i++;
+	if (!left_str[i])
+	{
+		free(left_str);
+		return (NULL);
+	}
+	str = (char *)malloc(sizeof(char) * (ft_strlen(left_str) - i + 1));
+	if (!str)
+		return (NULL);
+	i++;
+	j = 0;
+	while (left_str[i])
+		str[j++] = left_str[i++];
+	str[j] = '\0';
+	free(left_str);
+	return (str);
+>>>>>>> a1abd31497d2d75af38186dfe9efc2fbfe71d7ff
 }
