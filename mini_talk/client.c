@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zosobiro <zosobiro@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 16:59:44 by zosobiro          #+#    #+#             */
-/*   Updated: 2022/11/13 16:59:45 by zosobiro         ###   ########.fr       */
+/*   Updated: 2022/11/15 13:42:07 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void send_data(char c, int pid)
+void	send_data(char c, int pid)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 128;
 	j = 0;
@@ -32,10 +32,10 @@ void send_data(char c, int pid)
 	ft_error("", j);
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	int a;
-	int i;
+	int	a;
+	int	i;
 
 	i = 0;
 	if (ac == 3)

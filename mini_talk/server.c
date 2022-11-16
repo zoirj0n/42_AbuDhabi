@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zosobiro <zosobiro@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 17:00:05 by zosobiro          #+#    #+#             */
-/*   Updated: 2022/11/13 17:00:06 by zosobiro         ###   ########.fr       */
+/*   Updated: 2022/11/15 13:39:57 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void handler(int sig)
+void	handler(int sig)
 {
-	static int i;
-	static char c;
+	static int	i;
+	static char	c;
 
 	if (sig == SIGUSR1)
 		c = (c << 1) | 1;
@@ -30,9 +30,9 @@ void handler(int sig)
 	}
 }
 
-int main(void)
+int	main(void)
 {
-	int pid;
+	int	pid;
 
 	pid = getpid();
 	write(1, "Server started - pid ", 22);

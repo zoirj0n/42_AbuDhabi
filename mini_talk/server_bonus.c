@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   server_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zosobiro <zosobiro@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 17:00:01 by zosobiro          #+#    #+#             */
-/*   Updated: 2022/11/13 17:00:03 by zosobiro         ###   ########.fr       */
+/*   Updated: 2022/11/15 17:47:26 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void handler(int sig, siginfo_t *info, void *ptr)
+void	handler(int sig, siginfo_t *info, void *ptr)
 {
-	static int i;
-	static char c;
+	static int	i;
+	static char	c;
 
 	(void)ptr;
 	if (sig == SIGUSR1)
