@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zosobiro <zosobiro@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 11:38:40 by zosobiro          #+#    #+#             */
-/*   Updated: 2022/11/26 11:38:40 by zosobiro         ###   ########.fr       */
+/*   Updated: 2022/11/26 22:13:44 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ static int	verticalwall(t_complete *game)
 	width = game->widthmap;
 	while (height < game->heightmap)
 	{
-		if (!(game->map[height][0] == '1' && game->map[height][width - 1] == '1'))
+		if (!(game->map[height][0] == '1'
+            && game->map[height][width - 1] == '1'))
 			return (0);
 		height++;
 	}

@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   controls.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zosobiro <zosobiro@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 11:37:52 by zosobiro          #+#    #+#             */
-/*   Updated: 2022/11/26 11:37:52 by zosobiro         ###   ########.fr       */
+/*   Updated: 2022/11/26 21:28:11 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "so_long.h"
 
 static int	right_move(t_complete *game, int i, int j);
 
-static int	keyboard_w_s(t_complete *game, int movement)
+static	int	keyboard_w_s(t_complete *game, int movement)
 {
 	int	i;
 	int	j;

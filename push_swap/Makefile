@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/01/03 20:35:35 by zosobiro          #+#    #+#              #
+#    Updated: 2023/01/03 20:35:36 by zosobiro         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC = gcc
 CFLAGS = -Werror -Wextra -Wall
 SRC = ./src/push_swap.c ./src/instructions.c ./src/instructions_2.c ./src/ft_push1.c \
