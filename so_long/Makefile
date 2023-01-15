@@ -2,7 +2,7 @@ NAME := so_long
 
 CC := gcc
 
-CFLAGS := -Wall -Wextra -Werror -Iheaders/
+CFLAGS := -Wall -Wextra -Werror -Iheaders -g3 -fsanitize=address 
 
 SOURCE := game_logic/*.c
 GETNEXTLINE := get_next_line/*c

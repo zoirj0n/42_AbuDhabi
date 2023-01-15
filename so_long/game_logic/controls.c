@@ -6,7 +6,7 @@
 /*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 11:37:52 by zosobiro          #+#    #+#             */
-/*   Updated: 2022/11/26 21:28:11 by zosobiro         ###   ########.fr       */
+/*   Updated: 2023/01/15 14:03:49 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ static int	right_move(t_complete *game, int i, int j)
 	{
 		if (game->collectables != 0)
 			return (0);
-		printf("\e[31m\e[1m\nYou Have Won, Congrats! \e[0m \n");
+		printf("\e[31m\e[1m\nYou Won, Congrats! \e[0m \n");
 		exit_point(game);
 	}
 	if (game->map[j][i] == '0')
