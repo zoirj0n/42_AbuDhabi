@@ -6,7 +6,7 @@
 /*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 11:39:02 by zosobiro          #+#    #+#             */
-/*   Updated: 2023/01/15 14:43:57 by zosobiro         ###   ########.fr       */
+/*   Updated: 2023/01/15 15:27:07 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,6 @@ int	map_reading(t_complete *game, char **argv)
 	while (1)
 	{
 		readmap = get_next_line(game->fd);
-		// if (readmap == 0)
-		// 	return (0);
 		if (!add_line(game, readmap))
 			break ;
 	}

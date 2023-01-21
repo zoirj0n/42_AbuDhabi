@@ -6,7 +6,7 @@
 /*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 11:38:52 by zosobiro          #+#    #+#             */
-/*   Updated: 2023/01/15 14:52:33 by zosobiro         ###   ########.fr       */
+/*   Updated: 2023/01/15 19:04:48 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	place_images_in_game(t_complete *game)
 	game->floor = mlx_xpm_file_to_image(game->mlxpointer,
 			"game_images/floor_stone.xpm", &i, &j);
 	game->barrier = mlx_xpm_file_to_image(game->mlxpointer,
-			"game_images/wall_brick.xpm", &i, &j);
+			"game_images/wall.xpm", &i, &j);
 	game->player = mlx_xpm_file_to_image(game->mlxpointer,
 			"game_images/player_1.xpm", &i, &j);
 	game->exit = mlx_xpm_file_to_image(game->mlxpointer,
