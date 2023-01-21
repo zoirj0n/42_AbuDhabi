@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   philo.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/21 11:57:01 by zosobiro          #+#    #+#             */
+/*   Updated: 2023/01/21 11:57:02 by zosobiro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo.h"
 //argumentlarining hammasi raqam ekanligini tekshirish uchun 
 int	check(int ac, char **av)
