@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/01/21 11:56:57 by zosobiro          #+#    #+#              #
+#    Updated: 2023/01/21 11:56:58 by zosobiro         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = philo
 SRC = philo.c philo_utils.c start_prog.c initialize.c check_done_eat_and_die.c routine.c
 OBJS = $(SRC:.c=.o)

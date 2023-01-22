@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zosobiro <zosobiro@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 11:39:11 by zosobiro          #+#    #+#             */
-/*   Updated: 2022/11/26 11:39:11 by zosobiro         ###   ########.fr       */
+/*   Updated: 2023/01/15 19:08:11 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	exit_point(t_complete *game)
 	if (game->winpointer)
 		mlx_destroy_window(game->mlxpointer, game->winpointer);
 	free(game->mlxpointer);
-	while (line < game->heightmap - 1)
+	while (line < game->heightmap)
 		free(game->map[line++]);
 	free(game->map);
 	exit(0);

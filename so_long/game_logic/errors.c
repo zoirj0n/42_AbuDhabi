@@ -6,7 +6,7 @@
 /*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 11:38:40 by zosobiro          #+#    #+#             */
-/*   Updated: 2022/11/26 22:13:44 by zosobiro         ###   ########.fr       */
+/*   Updated: 2023/01/15 19:05:18 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,25 +38,11 @@ static int	verticalwall(t_complete *game)
 	while (height < game->heightmap)
 	{
 		if (!(game->map[height][0] == '1'
-            && game->map[height][width - 1] == '1'))
+			&& game->map[height][width - 1] == '1'))
 			return (0);
 		height++;
 	}
 	return (1);
-}
-
-static void	if_walls(t_complete *game)
-{
-	int	verticalwalls;
-	int	horizontalwalls;
-
-	verticalwalls = verticalwall(game);
-	horizontalwalls = horizontalwall(game);
-	if (!verticalwalls || !horizontalwalls)
-	{
-		printf("\e[31m\e[1mError\nThis map is missing the walls\e[0m \n");
-		exit_point(game);
-	}
 }
 
 static void	count_checker(t_complete *game, int height, int width)
@@ -106,6 +92,15 @@ void	character_valid(t_complete *game)
 
 void	check_errors(t_complete *game)
 {
-	if_walls(game);
+	int	verticalwalls;
+	int	horizontalwalls;
+
+	verticalwalls = verticalwall(game);
+	horizontalwalls = horizontalwall(game);
+	if (!verticalwalls || !horizontalwalls)
+	{
+		printf("\e[31m\e[1mError\nThis map is missing the walls\e[0m \n");
+		exit_point(game);
+	}
 	character_valid(game);
 }
