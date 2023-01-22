@@ -21,11 +21,11 @@ void	*pthread(void *philo)
 		usleep(2000);
 	while (!ft_check_died(phil))
 	{
-		if (phil->info->done_eat)
+		if (phil->info->ate)
 			break ;
 		philo_eat(phil);
 		print(phil, phil->id, "is sleeping");
-		philo_pause(phil, phil->info->time_sleep);
+		philo_pause(phil, phil->info->time_to_sleep);
 		print(phil, phil->id, "is thinking");
 	}
 	return (NULL);

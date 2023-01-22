@@ -48,8 +48,8 @@ void	philo_init(t_info *info, t_philo *philo)
 		philo[i].id = i;
 		philo[i].info->fork_status[i] = 0;
 		philo[i].info->sig[i] = -1;
-		philo[i].lfork = i;
-		philo[i].rfork = (i + 1) % info->num_philo;
+		philo[i].left_hand_fork = i;
+		philo[i].right_hand_fork = (i + 1) % info->num_philo;
 		philo[i].last_ate = get_time();
 	}
 }
@@ -61,16 +61,16 @@ void	info_init(t_philo *philo, t_info *info, int ac, char **av)
 	info->num_philo = ft_atoi(av[1]);
 	info->fork_status = malloc(sizeof(int) * info->num_philo);
 	info->sig = malloc(sizeof(int) * info->num_philo);
-	info->time_die = ft_atoi(av[2]);
-	info->time_eat = ft_atoi(av[3]);
-	info->time_sleep = ft_atoi(av[4]);
-	info->done_eat = 0;
+	info->time_to_die = ft_atoi(av[2]);
+	info->time_to_eat = ft_atoi(av[3]);
+	info->time_to_sleep = ft_atoi(av[4]);
+	info->ate = 0;
 	info->count = 0;
 	info->died = 0;
 	if (ac == 6)
-		info->must_eat = ft_atoi(av[5]);
+		info->must_to_eat = ft_atoi(av[5]);
 	else
-		info->must_eat = 0;
+		info->must_to_eat = 0;
 	init_mutex(info);
 	philo_init(info, philo);
 	start(philo);
