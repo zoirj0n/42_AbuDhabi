@@ -1,6 +1,6 @@
 #include "philo.h"
 
-void	death(t_philo *philo)
+void	die(t_philo *philo)
 {
 	pthread_mutex_lock(&(philo->info->die));
 	philo->info->died = 1;
@@ -45,7 +45,7 @@ int	check_death(t_philo *philo)
 		if (get_time() - time >= philo->info->time_die)
 		{
 			print(philo, i, "died");
-			death(philo);
+			die(philo);
 		}
 		if (ft_check_died(philo))
 			return (1);

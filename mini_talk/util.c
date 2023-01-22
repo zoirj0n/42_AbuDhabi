@@ -37,17 +37,17 @@ void	ft_putchar_fd(char c, int fd)
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int	num;
+	unsigned int	number;
 
-	num = n;
+	number = n;
 	if (n < 0)
 	{
 		ft_putnumber_fd('-', fd);
-		num = -n;
+		number = -n;
 	}
-	if (num >= 10)
-		ft_putnumber_fd(num / 10, fd);
-	ft_putchar_fd(num % 10 + '0', fd);
+	if (number >= 10)
+		ft_putnumber_fd(number / 10, fd);
+	ft_putchar_fd(number % 10 + '0', fd);
 }
 
 int	ft_atoi(const char *string)

@@ -37,7 +37,7 @@ typedef struct s_philo
 	t_info		*info;
 }				t_philo;
 
-int			ft_isdigit(int num);
+int			ft_isdigit(int number);
 int			ft_atoi(char *str);
 long long	get_time(void);
 void		philo_pause(t_philo *philo, int time_pause);

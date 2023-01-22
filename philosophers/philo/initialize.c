@@ -1,8 +1,8 @@
 #include "philo.h"
 
-int	ft_isdigit(int num)
+int	ft_isdigit(int number)
 {
-	if (num >= '0' && num <= '9')
+	if (number >= '0' && number <= '9')
 		return (1);
 	else
 		return (0);
