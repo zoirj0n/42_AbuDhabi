@@ -21,28 +21,28 @@ static char	*handle_edge_case(int n)
 	return (str);
 }
 
-static int	get_num_digits(int num)
+static int	get_num_digits(int number)
 {
 	int	num_digits;
 
 	num_digits = 0;
-	while (num > 0)
+	while (number > 0)
 	{
-		num /= 10;
+		number /= 10;
 		num_digits++;
 	}
 	return (num_digits);
 }
 
-static char	*fill_digits(char *str, int num, int num_digits, int is_neg)
+static char	*fill_digits(char *str, int number, int num_digits, int is_neg)
 {
 	int		i;
 
 	i = num_digits + is_neg - 1;
 	while (i >= 0)
 	{
-		str[i--] = num % 10 + '0';
-		num /= 10;
+		str[i--] = number % 10 + '0';
+		number /= 10;
 	}
 	if (is_neg)
 		str[0] = '-';

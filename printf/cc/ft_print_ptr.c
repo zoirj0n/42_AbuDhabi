@@ -1,31 +1,31 @@
 #include "ft_printf.h"
 
-static int	ft_ptr_len(uintptr_t num)
+static int	ft_ptr_len(uintptr_t number)
 {
 	int	len;
 
 	len = 0;
-	while (num != 0)
+	while (number != 0)
 	{
 		len++;
-		num = num / 16;
+		number = number / 16;
 	}
 	return (len);
 }
 
-static void	ft_put_ptr(uintptr_t num)
+static void	ft_put_ptr(uintptr_t number)
 {
-	if (num >= 16)
+	if (number >= 16)
 	{
-		ft_put_ptr(num / 16);
-		ft_put_ptr(num % 16);
+		ft_put_ptr(number / 16);
+		ft_put_ptr(number % 16);
 	}
 	else
 	{
-		if (num <= 9)
-			ft_putchar_fd((num + '0'), 1);
+		if (number <= 9)
+			ft_putchar_fd((number + '0'), 1);
 		else
-			ft_putchar_fd((num - 10 + 'a'), 1);
+			ft_putchar_fd((number - 10 + 'a'), 1);
 	}
 }
 

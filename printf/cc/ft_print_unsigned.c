@@ -1,50 +1,50 @@
 #include "ft_printf.h"
 
-int	ft_num_len(unsigned	int num)
+int	ft_num_len(unsigned	int number)
 {
 	int	len;
 
 	len = 0;
-	while (num != 0)
+	while (number != 0)
 	{
 		len++;
-		num = num / 10;
+		number = number / 10;
 	}
 	return (len);
 }
 
 char	*ft_uitoa(unsigned int n)
 {
-	char	*num;
+	char	*number;
 	int		len;
 
 	len = ft_num_len(n);
-	num = (char *)malloc(sizeof(char) * (len + 1));
-	if (!num)
+	number = (char *)malloc(sizeof(char) * (len + 1));
+	if (!number)
 		return (0);
-	num[len] = '\0';
+	number[len] = '\0';
 	while (n != 0)
 	{
-		num[len - 1] = n % 10 + 48;
+		number[len - 1] = n % 10 + 48;
 		n = n / 10;
 		len--;
 	}
-	return (num);
+	return (number);
 }
 
 int	ft_print_unsigned(unsigned int n)
 {
 	int		print_length;
-	char	*num;
+	char	*number;
 
 	print_length = 0;
 	if (n == 0)
 		print_length += write(1, "0", 1);
 	else
 	{
-		num = ft_uitoa(n);
-		print_length += ft_printstr(num);
-		free(num);
+		number = ft_uitoa(n);
+		print_length += ft_printstr(number);
+		free(number);
 	}
 	return (print_length);
 }

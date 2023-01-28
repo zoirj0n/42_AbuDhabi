@@ -33,12 +33,12 @@ int	ft_printstr(char *str)
 int	ft_printnbr(int n)
 {
 	int		len;
-	char	*num;
+	char	*number;
 
 	len = 0;
-	num = ft_itoa(n);
-	len = ft_printstr(num);
-	free(num);
+	number = ft_itoa(n);
+	len = ft_printstr(number);
+	free(number);
 	return (len);
 }
 
