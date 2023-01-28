@@ -6,7 +6,7 @@
 /*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 17:00:08 by zosobiro          #+#    #+#             */
-/*   Updated: 2022/11/16 00:21:56 by zosobiro         ###   ########.fr       */
+/*   Updated: 2023/01/27 18:45:41 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,11 @@ void	ft_putnbr_fd(int n, int fd)
 	number = n;
 	if (n < 0)
 	{
-		ft_putnumber_fd('-', fd);
+		ft_putnbr_fd('-', fd);
 		number = -n;
 	}
-	if (number >= 10)
-		ft_putnumber_fd(number / 10, fd);
+	if (num >= 10)
+		ft_putnbr_fd(number / 10, fd);
 	ft_putchar_fd(number % 10 + '0', fd);
 }
 
