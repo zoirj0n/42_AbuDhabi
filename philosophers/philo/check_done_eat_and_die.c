@@ -12,17 +12,17 @@
 
 #include "philo.h"
 
-void	death(t_philo *philo)
+void	die(t_philo *philo)
 {
 	pthread_mutex_lock(&(philo->info->die));
 	philo->info->died = 1;
 	pthread_mutex_unlock(&(philo->info->die));
 }
 
-void	done_eat(t_philo *philo)
+void	to_check_eating_is_fisnished(t_philo *philo)
 {
 	pthread_mutex_lock(&(philo->info->die));
-	philo->info->done_eat = 1;
+	philo->info->ate = 1;
 	pthread_mutex_unlock(&(philo->info->die));
 }
 
@@ -38,15 +38,15 @@ int	ft_check_died(t_philo *philo)
 	return (0);
 }
 
-int	check_death(t_philo *philo)
+int	to_check_death(t_philo *philo)
 {
 	int			i;
 	long long	time;
 
 	pthread_mutex_lock(&philo->info->count_eat);
-	if (philo->info->must_eat > 0 && \
+	if (philo->info->must_to_eat > 0 && \
 		philo->info->count >= philo->info->num_philo)
-		done_eat(philo);
+		to_check_eating_is_fisnished(philo);
 	pthread_mutex_unlock(&philo->info->count_eat);
 	i = 0;
 	while (i < philo->info->num_philo)
@@ -54,10 +54,10 @@ int	check_death(t_philo *philo)
 		pthread_mutex_lock(&(philo->info->eating));
 		time = philo[i].last_ate;
 		pthread_mutex_unlock(&(philo->info->eating));
-		if (get_time() - time >= philo->info->time_die)
+		if (get_time() - time >= philo->info->time_to_die)
 		{
 			print(philo, i, "died");
-			death(philo);
+			die(philo);
 		}
 		if (ft_check_died(philo))
 			return (1);
@@ -68,10 +68,10 @@ int	check_death(t_philo *philo)
 
 void	check_done_eat_and_die(t_philo *phil)
 {
-	while (!phil->info->done_eat)
+	while (!phil->info->ate)
 	{
 		usleep(200);
-		if (check_death(phil) || phil->info->done_eat)
+		if (to_check_death(phil) || phil->info->ate)
 			break ;
 	}
 }

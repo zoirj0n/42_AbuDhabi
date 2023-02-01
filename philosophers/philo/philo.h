@@ -21,11 +21,11 @@
 
 typedef struct s_info{
 	int					num_philo;
-	int					time_die;
-	int					time_eat;
-	int					time_sleep;
-	int					must_eat;
-	int					done_eat;
+	int					time_to_die;
+	int					time_to_eat;
+	int					time_to_sleep;
+	int					must_to_eat;
+	int					aet;
 	int					*fork_status;
 	int					*sig;
 	int					count;
@@ -43,13 +43,13 @@ typedef struct s_philo
 	int			ate;
 	int			id;
 	long long	last_ate;
-	int			lfork;
-	int			rfork;
+	int			left_hand_fork;
+	int			right_hand_fork;
 	pthread_t	philo_t;
 	t_info		*info;
 }				t_philo;
 
-int			ft_isdigit(int num);
+int			ft_isdigit(int number);
 int			ft_atoi(char *str);
 long long	get_time(void);
 void		philo_pause(t_philo *philo, int time_pause);
