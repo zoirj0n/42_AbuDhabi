@@ -6,7 +6,7 @@
 /*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 12:49:38 by zosobiro          #+#    #+#             */
-/*   Updated: 2023/02/04 16:57:07 by zosobiro         ###   ########.fr       */
+/*   Updated: 2023/02/04 23:21:03 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ char	*ft_read_to_left_str(int fd, char *left_str)
 	return (left_str);
 }
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
-	char *line;
-	static char *left_str;
+	char		*line;
+	static char	*left_str;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
