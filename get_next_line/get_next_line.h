@@ -6,7 +6,7 @@
 /*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 12:49:40 by zosobiro          #+#    #+#             */
-/*   Updated: 2022/11/15 12:49:41 by zosobiro         ###   ########.fr       */
+/*   Updated: 2023/02/04 16:54:31 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #include <unistd.h>
 
 #ifndef BUFFER_SIZE
-#define BUFFER_SIZE 2
+#define BUFFER_SIZE 10
 #endif
 
 char *get_next_line(int fd);

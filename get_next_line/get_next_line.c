@@ -6,7 +6,7 @@
 /*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 12:49:38 by zosobiro          #+#    #+#             */
-/*   Updated: 2022/11/15 12:52:45 by zosobiro         ###   ########.fr       */
+/*   Updated: 2023/02/04 16:57:07 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_read_to_left_str(int fd, char *left_str)
 	if (!buff)
 		return (NULL);
 	rd_bytes = 1;
-	while (ft_strchr(left_str, '\n') == 0 && rd_bytes0 != 0)
+	while (ft_strchr(left_str, '\n') == 0 && rd_bytes != 0)
 	{
 		rd_bytes = read(fd, buff, BUFFER_SIZE);
 		if (rd_bytes == -1)
@@ -54,15 +54,17 @@ char *get_next_line(int fd)
 int	main(void)
 {
 	char	*line;
+	
 	int		fd1;
 
-	fd1 = open("test/test.txt", O_RDONLY);
+
+	fd1 = open("test.txt", O_RDONLY);
 	line = get_next_line(fd1);
-	printf("line 1: %s\n", line);
-	line = get_next_line(fd1);
-	printf("line 1: %s\n", line);
-	line = get_next_line(fd1);
-	printf("line 1: %s\n", line);
+	while(line != NULL)
+	{
+		line = get_next_line(fd1);
+		printf("line 1: %s\n", line);
+	}
 	close(fd1);
 	return (0);
 }

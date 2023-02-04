@@ -6,7 +6,7 @@
 /*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 11:57:07 by zosobiro          #+#    #+#             */
-/*   Updated: 2023/01/21 11:57:08 by zosobiro         ###   ########.fr       */
+/*   Updated: 2023/02/04 15:47:09 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*pthread(void *philo)
 		usleep(2000);
 	while (!ft_check_died(phil))
 	{
-		if (phil->info->ate)
+		if (phil->info->eat)
 			break ;
 		philo_eat(phil);
 		print(phil, phil->id, "is sleeping");

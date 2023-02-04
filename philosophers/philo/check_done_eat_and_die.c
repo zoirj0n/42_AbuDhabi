@@ -6,7 +6,7 @@
 /*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 11:56:53 by zosobiro          #+#    #+#             */
-/*   Updated: 2023/01/21 11:56:54 by zosobiro         ###   ########.fr       */
+/*   Updated: 2023/02/04 15:51:39 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	die(t_philo *philo)
 void	to_check_eating_is_fisnished(t_philo *philo)
 {
 	pthread_mutex_lock(&(philo->info->die));
-	philo->info->ate = 1;
+	philo->info->eat = 1;
 	pthread_mutex_unlock(&(philo->info->die));
 }
 
@@ -68,10 +68,10 @@ int	to_check_death(t_philo *philo)
 
 void	check_done_eat_and_die(t_philo *phil)
 {
-	while (!phil->info->ate)
+	while (!phil->info->eat)
 	{
 		usleep(200);
-		if (to_check_death(phil) || phil->info->ate)
+		if (to_check_death(phil) || phil->info->eat)
 			break ;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 11:57:04 by zosobiro          #+#    #+#             */
-/*   Updated: 2023/01/21 11:57:05 by zosobiro         ###   ########.fr       */
+/*   Updated: 2023/02/04 15:50:34 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct s_info{
 	int					time_to_eat;
 	int					time_to_sleep;
 	int					must_to_eat;
-	int					aet;
+	int					eat;
 	int					*fork_status;
 	int					*sig;
 	int					count;
@@ -40,11 +40,11 @@ typedef struct s_info{
 
 typedef struct s_philo
 {
-	int			ate;
+	int			eat;
 	int			id;
 	long long	last_ate;
-	int			left_hand_fork;
-	int			right_hand_fork;
+	int			lfork;
+	int			rfork;
 	pthread_t	philo_t;
 	t_info		*info;
 }				t_philo;

@@ -6,7 +6,7 @@
 /*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 11:56:55 by zosobiro          #+#    #+#             */
-/*   Updated: 2023/01/21 11:56:57 by zosobiro         ###   ########.fr       */
+/*   Updated: 2023/02/04 15:51:06 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,12 @@ void	philo_init(t_info *info, t_philo *philo)
 	while (++i < info->num_philo)
 	{
 		philo[i].info = info;
-		philo[i].ate = 0;
+		philo[i].eat = 0;
 		philo[i].id = i;
 		philo[i].info->fork_status[i] = 0;
 		philo[i].info->sig[i] = -1;
-		philo[i].left_hand_fork = i;
-		philo[i].right_hand_fork = (i + 1) % info->num_philo;
+		philo[i].lfork = i;
+		philo[i].rfork = (i + 1) % info->num_philo;
 		philo[i].last_ate = get_time();
 	}
 }
@@ -64,7 +64,7 @@ void	info_init(t_philo *philo, t_info *info, int ac, char **av)
 	info->time_to_die = ft_atoi(av[2]);
 	info->time_to_eat = ft_atoi(av[3]);
 	info->time_to_sleep = ft_atoi(av[4]);
-	info->ate = 0;
+	info->eat = 0;
 	info->count = 0;
 	info->died = 0;
 	if (ac == 6)
