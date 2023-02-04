@@ -6,7 +6,7 @@
 /*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 17:00:01 by zosobiro          #+#    #+#             */
-/*   Updated: 2022/11/15 17:47:26 by zosobiro         ###   ########.fr       */
+/*   Updated: 2023/02/02 00:07:39 by zosobiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ void	handler(int sig, siginfo_t *info, void *ptr)
 	}
 }
 
-int main(void)
+int	main(void)
 {
-	int pid;
-	struct sigaction sa;
+	int					pid;
+	struct sigaction	sa;
 
 	pid = getpid();
 	write(1, "Server started - pid ", 22);

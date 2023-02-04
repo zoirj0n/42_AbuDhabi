@@ -6,7 +6,7 @@
 #    By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 11:56:57 by zosobiro          #+#    #+#              #
-#    Updated: 2023/01/21 11:56:58 by zosobiro         ###   ########.fr        #
+#    Updated: 2023/02/04 15:55:06 by zosobiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,8 @@ all: ${NAME}
 
 ${NAME}: ${OBJS}
 	${CC} -lpthread ${CFLAGS} ${OBJS} -o $@
+	clear
+	@echo "\033[92m Done !\033[0m"
 
 %.o: %.c philosophers.h
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
@@ -31,3 +33,5 @@ fclean: clean
 	rm -f ${NAME}
 
 re: fclean all
+	clear
+	@echo "\033[92m Done !\033[0m"
