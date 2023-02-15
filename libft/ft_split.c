@@ -72,7 +72,7 @@ char	**ft_split(const char *s, char c)
 
 // int main()
 // {
-// 	char **words = ft_split("lebanon,uzbekistan,emirates,japan,russian", ',');
+// 	char **words = ft_split("hello world", 'w');
 // 	int i = 0;
 // 	while (i < 5)
 // 	{
