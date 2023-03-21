@@ -3,6 +3,8 @@ NAME		= attack
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror -std=c++98
 RM			= rm -rf
+ART1	= "\t\t\t\t\t\t ██████╗██████╗ ██████╗     ███╗   ███╗ ██████╗ ██████╗ ██╗   ██╗██╗     ███████╗\n\t\t\t\t\t\t██╔════╝██╔══██╗██╔══██╗    ████╗ ████║██╔═══██╗██╔══██╗██║   ██║██║     ██╔════╝\n\t\t\t\t\t\t██║     ██████╔╝██████╔╝    ██╔████╔██║██║   ██║██║  ██║██║   ██║██║     █████╗  \n\t\t\t\t\t\t██║     ██╔═══╝ ██╔═══╝     ██║╚██╔╝██║██║   ██║██║  ██║██║   ██║██║     ██╔══╝  \n\t\t\t\t\t\t╚██████╗██║     ██║         ██║ ╚═╝ ██║╚██████╔╝██████╔╝╚██████╔╝███████╗███████╗\n\t\t\t\t\t\t ╚═════╝╚═╝     ╚═╝         ╚═╝     ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝\n\n"
+MYNAME	= "\033[36m\t\t\t\t\t\t\t\t\t 𝐙 𝐎 𝐈 𝐑 𝐉 𝐎 𝐍 _ 𝐒 𝐎 𝐁 𝐈 𝐑 𝐎 𝐕 \033[0m"
 
 OBJDIR = .objFiles
 
@@ -30,6 +32,8 @@ all: $(NAME)
 
 $(NAME): $(OBJ) $(HEADER)
 	@$(CC) $(OBJ) $(OPTS) -o $(NAME)
+	clear
+	@echo $(ART1) $(MYNAME)
 	@printf "$(_SUCCESS) $(GREEN)- Executable ready.\n$(RESET)"
 
 $(OBJDIR)/%.o: %.cpp $(HEADER)
@@ -38,10 +42,14 @@ $(OBJDIR)/%.o: %.cpp $(HEADER)
 
 clean:
 	@$(RM) $(OBJDIR) $(OBJ)
+	clear
+	@echo $(ART1) $(MYNAME)
 	@printf "$(YELLOW)    - Object files removed.$(RESET)\n"
 
 fclean: clean
 	@$(RM) $(NAME)
+	clear
+	@echo $(ART1) $(MYNAME)
 	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
 
 re: fclean all
