@@ -1,6 +1,18 @@
-/*
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zosobiro <zosobiro@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/23 07:07:27 by zosobiro          #+#    #+#             */
+/*   Updated: 2023/03/23 07:07:46 by zosobiro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-C++ virtual function:
+
+
+/*C++ virtual function:
 - A C++ virtual function is a member function in the base class that you redefine
     in a derived class. It is declared using the virtual keyword.
 - It is used to tell the compiler to perform dynamic linkage or late binding
